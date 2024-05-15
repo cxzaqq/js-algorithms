@@ -247,28 +247,25 @@ describe("LinkedList", () => {
     expect(node.value).toBe(1);
   });
 
-  it('should reverse linked list', () => {
+  it("should reverse linked list", () => {
     const linkedList = new LinkedList();
 
     // Add test values to linked list.
-    linkedList
-      .append(1)
-      .append(2)
-      .append(3);
+    linkedList.append(1).append(2).append(3);
 
-    expect(linkedList.toString()).toBe('1,2,3');
+    expect(linkedList.toString()).toBe("1,2,3");
     expect(linkedList.head.value).toBe(1);
     expect(linkedList.tail.value).toBe(3);
 
     // Reverse linked list.
     linkedList.reverse();
-    expect(linkedList.toString()).toBe('3,2,1');
+    expect(linkedList.toString()).toBe("3,2,1");
     expect(linkedList.head.value).toBe(3);
     expect(linkedList.tail.value).toBe(1);
 
     // Reverse linked list back to initial state.
     linkedList.reverse();
-    expect(linkedList.toString()).toBe('1,2,3');
+    expect(linkedList.toString()).toBe("1,2,3");
     expect(linkedList.head.value).toBe(1);
     expect(linkedList.tail.value).toBe(3);
   });
