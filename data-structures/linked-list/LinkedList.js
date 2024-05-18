@@ -101,13 +101,14 @@ export default class LinkedList {
         newNode.next = currentNode.next;
         currentNode.next = newNode;
       } else {
-        if (this.tail) {
-          this.tail.next = newNode;
-          this.tail = newNode;
-        } else {
-          this.head = newNode;
-          this.tail = newNode;
-        }
+        // if (this.tail) {
+        //   this.tail.next = newNode;
+        //   this.tail = newNode;
+        // } else {
+        //   this.head = newNode;
+        //   this.tail = newNode;
+        // }
+        this.append(value);
       }
     }
     return this;
