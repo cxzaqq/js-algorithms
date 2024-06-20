@@ -30,7 +30,7 @@ export default class Heap {
   }
 
   hasLeftChild(parentIndex) {
-    return this.getRightChildIndex(parentIndex) < this.heapContainer.length;
+    return this.getLeftChildIndex(parentIndex) < this.heapContainer.length;
   }
 
   hasRightChild(parentIndex) {
